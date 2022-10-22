@@ -1,0 +1,15 @@
+{
+ "chassis_type": 73,
+ "chassis_base_mac": {
+  "mac_address": "AAAAAAAA"
+ },
+ "chassis_serial_number": "",
+ "is_active": true,
+ "card_details": [],
+ "cpm_slot_by_letter": "A",
+ "is_singleru": true,
+ "slot_num": 0,
+ "cpm_card_type": 188,
+ "ztp_interfaces": [],
+ "chassis_name": "7220 IXR-D3L"
+}
