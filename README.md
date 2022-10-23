@@ -3,9 +3,8 @@ SR Linux has first-class Streaming Telemetry support thanks to 100% YANG coverag
 
 The Nokia Service Router Operating System (SR OS) is robust and scalable OS and provides the foundation of Nokia's comprehensive portfolio of physical and virtualized routers. Provides Streaming Telemetry based on the OpenConfig gnmi.proto and the proprietary NOKIA SR OS YANG data models suporting sample, target-defined, on-change telemetry based on dial-in or dial-out calls.
 
-This lab is a small aumentation of the original srl-telemtry-lab https://github.com/srl-labs/srl-telemetry-lab wich basically represents a small Clos fabric with [Nokia SR Linux](https://learn.srlinux.dev/) switches running as containers and a super spine layer composed by [Nokia SROS](https://www.nokia.com/networks/technologies/service-router-operating-system/) DC Gateways on a vSIM containerized image connected through an ovs-bridge. The lab topology consists of a Clos/DCI, plus a Streaming Telemetry stack comprised of gnmic, prometheus and grafana applications.
+This lab is a small aumentation of the original srl-telemetry-lab https://github.com/srl-labs/srl-telemetry-lab wich basically represents a small Clos fabric with [Nokia SR Linux](https://learn.srlinux.dev/) switches running as containers and a super spine layer composed by [Nokia SROS](https://www.nokia.com/networks/technologies/service-router-operating-system/) DC Gateways on a containerized vSIM image connected through an ovs-bridge. The lab topology consists of a Clos/DCI, plus a Streaming Telemetry stack comprised of gnmic, prometheus and grafana applications.
 
-![pic1](https://gitlab.com/rdodin/pics/-/wikis/uploads/0784c31d48ec18fd24111ad8d73478b0/image.png)   # Not Updated Image
 
 Goals of this lab:
 
@@ -46,7 +45,7 @@ docker exec -it client1 bash
 ## Fabric configuration
 The DC fabric used in this lab consists of three leaves, two spines and two super spines interconnected with each other as shown in the diagram.
 
-![pic](https://drive.google.com/file/d/1qdOl4NGU6SIcK30lF8jkWfj6nllIg1Eu/view?usp=sharing)
+![pic2](https://gitlabe2.ext.net.nokia.com/mpaz/srl-sros-telemetry-lab/-/wikis/uploads/eb96276f3f8b1a10882fc185c8393dfe/clos-topology.JPG)
 
 Leaves and spines use Nokia SR Linux IXR-D2 and IXR-D3L chassis respectively, super spine uses SR-1 chassis. Each network element of this topology is equipped with a [startup configuration file](configs/fabric/) that is applied at the node's startup.
 
@@ -131,11 +130,11 @@ Grafana is a key component of this lab. Lab's topology file includes grafana nod
 
 Grafana dashboard provided by this repository provides multiple views on the collected real-time data. Powered by [flowchart plugin](https://grafana.com/grafana/plugins/agenty-flowcharting-panel/) it overlays telemetry sourced data over graphics such as topology and front panel views:
 
-![pic3](https://gitlabe2.ext.net.nokia.com/mpaz/srl-sros-telemetry-lab/-/wikis/uploads/b6743d24cd849ef123094d6199cafb51/srl-sros-pannel.JPG)
+![pic3](https://gitlabe2.ext.net.nokia.com/mpaz/srl-sros-telemetry-lab/-/wikis/uploads/3f433abdedfa6db9a21c2f3e83d5f37e/srl-sros-pannel.JPG)
 
 Using the flowchart plugin and real telemetry data users can create interactive topology maps (aka weathermap) with a visual indication of link rate/utilization.
 
-![pic2](https://gitlabe2.ext.net.nokia.com/mpaz/srl-sros-telemetry-lab/-/wikis/uploads/ba9f0d8937d188433dba2202324bd69d/topology-final.JPG)
+![pic2](https://gitlabe2.ext.net.nokia.com/mpaz/srl-sros-telemetry-lab/-/wikis/uploads/b88caf62f2226db165b42cc68fb93b1a/Topology.JPG)
 
 ## Access details
 
