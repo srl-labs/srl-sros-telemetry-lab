@@ -46,25 +46,58 @@ topology:
       group: spine
       startup-config: configs/fabric/spine1.cfg
       mgmt_ipv4: 172.80.80.21
+      binds:
+        - configs/fabric/srl-ndk-git_0.1.0_linux_amd64.rpm:/home/admin/srl-ndk-git_0.1.0_linux_amd64.rpm
+        - configs/fabric/agent_config_spine1.txt:/home/admin/agent_config_spine1.txt
+        - configs/fabric/spine1_agent_install.sh:/home/admin/spine1_agent_install.sh
+      exec:
+        - bash /home/admin/spine1_agent_install.sh
+
     spine2:
       type: ixrd3l
       group: spine
       startup-config: configs/fabric/spine2.cfg
       mgmt_ipv4: 172.80.80.22
+      binds:
+        - configs/fabric/srl-ndk-git_0.1.0_linux_amd64.rpm:/home/admin/srl-ndk-git_0.1.0_linux_amd64.rpm
+        - configs/fabric/agent_config_spine2.txt:/home/admin/agent_config_spine2.txt
+        - configs/fabric/spine2_agent_install.sh:/home/admin/spine2_agent_install.sh
+      exec:
+        - bash /home/admin/spine2_agent_install.sh
 
     ### LEAFS ###
     leaf1:
       startup-config: configs/fabric/leaf1.cfg
       mgmt_ipv4: 172.80.80.11
       group: leaf
+      binds:
+        - configs/fabric/srl-ndk-git_0.1.0_linux_amd64.rpm:/home/admin/srl-ndk-git_0.1.0_linux_amd64.rpm
+        - configs/fabric/agent_config_leaf1.txt:/home/admin/agent_config_leaf1.txt
+        - configs/fabric/leaf1_agent_install.sh:/home/admin/leaf1_agent_install.sh
+      exec:
+        - bash /home/admin/leaf1_agent_install.sh
+      
     leaf2:
       startup-config: configs/fabric/leaf2.cfg
       mgmt_ipv4: 172.80.80.12
       group: leaf
+      binds:
+        - configs/fabric/srl-ndk-git_0.1.0_linux_amd64.rpm:/home/admin/srl-ndk-git_0.1.0_linux_amd64.rpm
+        - configs/fabric/agent_config_leaf2.txt:/home/admin/agent_config_leaf2.txt
+        - configs/fabric/leaf2_agent_install.sh:/home/admin/leaf2_agent_install.sh
+      exec:
+        - bash /home/admin/leaf2_agent_install.sh
+
     leaf3:
       startup-config: configs/fabric/leaf3.cfg
       mgmt_ipv4: 172.80.80.13
       group: leaf
+      binds:
+        - configs/fabric/srl-ndk-git_0.1.0_linux_amd64.rpm:/home/admin/srl-ndk-git_0.1.0_linux_amd64.rpm
+        - configs/fabric/agent_config_leaf3.txt:/home/admin/agent_config_leaf3.txt
+        - configs/fabric/leaf3_agent_install.sh:/home/admin/leaf3_agent_install.sh
+      exec:
+        - bash /home/admin/leaf3_agent_install.sh
 
     ### CLIENTS ###
     client1:

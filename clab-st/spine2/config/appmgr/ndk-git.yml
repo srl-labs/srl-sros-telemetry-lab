@@ -1,0 +1,12 @@
+ndk-git:
+    run-as-user: root
+    path: /opt/srlinux/usr/bin/
+    launch-command: ./ndk-git
+    search-command: ./ndk-git
+    wait-for-config: Yes
+    failure-action: wait=1
+    yang-modules:
+        names: 
+            - "ndk-git"
+        source-directories:
+            - "/opt/ndk-git/yang/"

@@ -154,6 +154,13 @@ subscriptions:
     mode: stream
     stream-mode: sample
     sample-interval: 5s
+  
+  srl_gitclient:
+    paths:
+      - /git-client/statistics/
+    mode: stream
+    stream-mode: sample
+    sample-interval: 5s
 
   ### SROS ###
   sros_if_oper_state:
