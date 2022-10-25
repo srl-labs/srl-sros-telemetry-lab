@@ -130,7 +130,7 @@ Grafana is a key component of this lab. Lab's topology file includes grafana nod
 
 Grafana dashboard provided by this repository provides multiple views on the collected real-time data. Powered by [flowchart plugin](https://grafana.com/grafana/plugins/agenty-flowcharting-panel/) it overlays telemetry sourced data over graphics such as topology and front panel views:
 
-![pic3](https://gitlabe2.ext.net.nokia.com/mpaz/srl-sros-telemetry-lab/-/wikis/uploads/32064b2b889237d2386e2f16edffe4ba/Pannel-view.JPG)
+![pic3](https://gitlabe2.ext.net.nokia.com/mpaz/srl-sros-telemetry-lab/-/wikis/uploads/b3fe760389b8a6cb4fe77e58ccf795ce/srl-sros-pannel-2.JPG)
 
 Using the flowchart plugin and real telemetry data users can create interactive topology maps (aka weathermap) with a visual indication of link rate/utilization.
 
