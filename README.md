@@ -3,7 +3,7 @@ SR Linux has first-class Streaming Telemetry support thanks to 100% YANG coverag
 
 The Nokia Service Router Operating System (SR OS) is robust and scalable OS and provides the foundation of Nokia's comprehensive portfolio of physical and virtualized routers. Provides Streaming Telemetry based on the OpenConfig gnmi.proto and the proprietary NOKIA SR OS YANG data models suporting sample, target-defined, on-change telemetry based on dial-in or dial-out calls.
 
-This lab is a small augmentation of the original srl-telemetry-lab https://github.com/srl-labs/srl-telemetry-lab wich basically represents a small Clos fabric with [Nokia SR Linux](https://learn.srlinux.dev/) switches running as containers and a super spine layer composed by [Nokia SROS](https://www.nokia.com/networks/technologies/service-router-operating-system/) DC Gateways on a containerized vSIM image connected through an ovs-bridge. The lab topology consists of a Clos/DCI, plus a Streaming Telemetry stack comprised of gnmic, prometheus and grafana applications.
+This lab is a small augmentation of the original srl-telemetry-lab https://github.com/srl-labs/srl-telemetry-lab wich basically represents a small Clos fabric with [Nokia SR Linux](https://learn.srlinux.dev/) switches running as containers and a DC gateways layer composed by [Nokia SROS](https://www.nokia.com/networks/technologies/service-router-operating-system/) DC Gateways on a containerized vSIM image connected through an ovs-bridge. The lab topology consists of a Clos/DCI, plus a Streaming Telemetry stack comprised of gnmic, prometheus and grafana applications.
 
 
 Goals of this lab:
@@ -43,13 +43,13 @@ docker exec -it client1 bash
 ```
 
 ## Fabric configuration
-The DC fabric used in this lab consists of three leaves, two spines and two super spines interconnected with each other as shown in the diagram.
+The DC fabric used in this lab consists of three leaves, two spines and two DC gateways interconnected with each other as shown in the diagram.
 
 ![pic2](https://gitlabe2.ext.net.nokia.com/mpaz/srl-sros-telemetry-lab/-/wikis/uploads/c9fd0d4f61d9e99fb77f1ec97f64888f/Topology.JPG)
 
-Leaves and spines use Nokia SR Linux IXR-D2 and IXR-D3L chassis respectively, super spine uses SR-1 chassis. Each network element of this topology is equipped with a [startup configuration file](configs/fabric/) that is applied at the node's startup.
+Leaves and spines use Nokia SR Linux IXR-D2 and IXR-D3L chassis respectively, DC gateways uses SR-1 chassis. Each network element of this topology is equipped with a [startup configuration file](configs/fabric/) that is applied at the node's startup.
 
-Once booted, network nodes will come up with interfaces, underlay protocols and overlay service configured. The fabric is configured with Layer 2 EVPN service between the leaves and super spines.
+Once booted, network nodes will come up with interfaces, underlay protocols and overlay service configured. The fabric is configured with Layer 2 EVPN service between the leaves and DC gateways.
 
 ### Verifying the underlay and overlay status
 The underlay network is provided by eBGP, and the overlay network, by iBGP. By connecting via SSH to one of the leaves, it is possible to verify the status of those BGP sessions.
@@ -70,7 +70,7 @@ Flags: S static, D dynamic, L discovered by LLDP, B BFD enabled, - disabled, * s
 +-----------+---------------+---------------+-------+----------+-------------+--------------+--------------+---------------+
 ```
 
-By connecting via SSH is also possible to one of the super spine verify the stats of those BGP sesions from the SROS perspective.
+By connecting via SSH is also possible to one of the DC gateways verify the stats of those BGP sesions from the SROS perspective.
 
 ```
 A:admin@dcgw1# show router bgp summary | match Summary post-lines 20
