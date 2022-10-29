@@ -125,11 +125,11 @@ To stop the traffic:
 
 As the lab name suggests, telemetry is at its core. The following stack of software solutions has been chosen for this lab:
 
-| Role                | Software                            |
-| ------------------- | ----------------------------------- |
-| Telemetry collector | [gnmic](https://gnmic.kmrd.dev)     |
-| Time-Series DB      | [prometheus](https://prometheus.io) |
-| Visualization       | [grafana](https://grafana.com)      |
+| Role                | Software                              |
+| ------------------- | ------------------------------------- |
+| Telemetry collector | [gnmic](https://gnmic.openconfig.net) |
+| Time-Series DB      | [prometheus](https://prometheus.io)   |
+| Visualization       | [grafana](https://grafana.com)        |
 
 ## Grafana
 
