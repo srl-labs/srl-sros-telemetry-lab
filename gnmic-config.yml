@@ -155,12 +155,6 @@ subscriptions:
     stream-mode: sample
     sample-interval: 5s
   
-  srl_gitclient:
-    paths:
-      - /git-client/statistics/
-    mode: stream
-    stream-mode: sample
-    sample-interval: 5s
 
   ### SROS ###
   sros_if_oper_state:
@@ -240,8 +234,6 @@ subscriptions:
     stream-mode: sample
     sample-interval: 5s
 
-  # total peers
-  #/state router bgp statistics peers
   sros_bgp_neighbor_stats:
     paths:
       - /state/router[router-name=*]/bgp/neighbor/[ip-address=*]/statistics
@@ -277,13 +269,6 @@ subscriptions:
     mode: stream
     stream-mode: sample
     sample-interval: 5s
-
-#  sros_ipv4_bgp_neighbors:
-#    paths:
-#      - /state/router[router-name=*]/route-table/unicast/ipv4/statistics/bgp
-#    mode: stream
-#    stream-mode: sample
-#    sample-interval: 5s
 
   sros_ipv6_stats:
     paths:
@@ -330,7 +315,6 @@ subscriptions:
   sros_vxlan_vteps:
     paths:
       - /state/service/vxlan/tep[ip-address=*]
-      #- /state/service/vpls[service-name=*]/vxlan/instance[vxlan-instance=*]/destinations
     mode: stream
     stream-mode: sample
     sample-interval: 5s
