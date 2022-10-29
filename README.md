@@ -36,9 +36,10 @@ containerlab destroy -t st.clab.yml
 Once the lab has been deployed, the different SR Linux/SROS nodes can be accessed via SSH through their management IP address, given in the summary displayed after the execution of the deploy command. It is also possible to reach those nodes directly via their hostname, defined in the topology file. Linux clients cannot be reached via SSH, as it is not enabled, but it is possible to connect to them with a docker exec command.
 
 ```bash
-# reach a SR Linux leaf or a spine via SSH
+# reach a SR Linux leaf, spine or a dcgw via SSH
 ssh admin@leaf1
 ssh admin@spine1
+ssh admin@dcgw1
 
 # reach a Linux client via Docker
 docker exec -it client1 bash
@@ -59,19 +60,21 @@ Once booted, network nodes will come up with interfaces, underlay protocols and 
 The underlay network is provided by eBGP, and the overlay network, by iBGP. By connecting via SSH to one of the leaves, it is possible to verify the status of those BGP sessions.
 
 ```
-A:leaf1# show network-instance default protocols bgp neighbor
-------------------------------------------------------------------------------------------------------------------
+A:leaf1# show network-instance protocols bgp neighbor  
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 BGP neighbor summary for network-instance "default"
 Flags: S static, D dynamic, L discovered by LLDP, B BFD enabled, - disabled, * slow
-
-+-----------+---------------+---------------+-------+----------+-------------+--------------+--------------+---------------+
-| Net-Inst  |     Peer      |     Group     | Flags | Peer-AS  |   State     |    Uptime    |   AFI/SAFI   | Rx/Active/Tx] |
-+===========+===============+===============+=======+==========+=============+==============+==============+===============+
-| default   | 10.0.2.1      | iBGP-overlay  | S     | 100      | established | 0d:0h:0m:27s | evpn         | [4/4/2]       |
-| default   | 10.0.2.2      | iBGP-overlay  | S     | 100      | established | 0d:0h:0m:28s | evpn         | [4/0/2]       |
-| default   | 192.168.11.1  | eBGP          | S     | 201      | established | 0d:0h:0m:34s | ipv4-unicast | [3/3/2]       |
-| default   | 192.168.12.1  | eBGP          | S     | 202      | established | 0d:0h:0m:33s | ipv4-unicast | [3/3/4]       |
-+-----------+---------------+---------------+-------+----------+-------------+--------------+--------------+---------------+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
++-----------------------+----------------------------------+-----------------------+--------+------------+-------------------+-------------------+-----------------+----------------------------------+
+|       Net-Inst        |               Peer               |         Group         | Flags  |  Peer-AS   |       State       |      Uptime       |    AFI/SAFI     |          [Rx/Active/Tx]          |
++=======================+==================================+=======================+========+============+===================+===================+=================+==================================+
+| default               | 10.0.2.1                         | iBGP-overlay          | S      | 100        | established       | 0d:0h:53m:57s     | evpn            | [4/4/1]                          |
+| default               | 10.0.2.2                         | iBGP-overlay          | S      | 100        | established       | 0d:0h:53m:57s     | evpn            | [4/0/1]                          |
+| default               | 192.168.11.1                     | eBGP                  | S      | 201        | established       | 0d:0h:54m:2s      | ipv4-unicast    | [5/5/2]                          |
+| default               | 192.168.12.1                     | eBGP                  | S      | 201        | established       | 0d:0h:54m:2s      | ipv4-unicast    | [5/5/6]                          |
++-----------------------+----------------------------------+-----------------------+--------+------------+-------------------+-------------------+-----------------+----------------------------------+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```
 
 By connecting via SSH is also possible to one of the DC gateways verify the stats of those BGP sesions from the SROS perspective.
@@ -88,17 +91,17 @@ Description
                       PktSent OutQ
 -------------------------------------------------------------------------------
 10.0.2.1
-               100         28    0 00h00m51s 9/7/2 (Evpn)
-                           22    0           
+               100        136    0 00h52m38s 4/3/1 (Evpn)
+                          115    0           
 10.0.2.2
-               100         27    0 00h00m42s 9/0/2 (Evpn)
-                           22    0           
+               100        137    0 00h53m02s 4/0/1 (Evpn)
+                          116    0           
 192.168.41.0
-               201         29    0 00h00m45s 6/4/1 (IPv4)
-                           25    0           
+               201        116    0 00h53m45s 5/4/1 (IPv4)
+                          114    0           
 192.168.41.2
-               202         30    0 00h00m30s 6/1/1 (IPv4)
-                           24    0           
+               201        116    0 00h53m55s 5/4/1 (IPv4)
+                          113    0           
 ```
 
 ## Running traffic
