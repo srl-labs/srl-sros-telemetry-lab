@@ -11,10 +11,65 @@ encoding: json_ietf
 
 targets:
   leaf1:57400:
+    subscriptions:
+      - srl_if_oper_state
+      - srl_net_instance
+      - srl_if_stats
+      - srl_if_traffic_rate
+      - srl_cpu
+      - srl_mem
+      - srl_bgp_stats
+      - srl_ipv4_routes
+      - srl_ipv6_routes
+      - srl_apps  
   leaf2:57400:
+    subscriptions:
+      - srl_if_oper_state
+      - srl_net_instance
+      - srl_if_stats
+      - srl_if_traffic_rate
+      - srl_cpu
+      - srl_mem
+      - srl_bgp_stats
+      - srl_ipv4_routes
+      - srl_ipv6_routes
+      - srl_apps  
   leaf3:57400:
+    subscriptions:
+      - srl_if_oper_state
+      - srl_net_instance
+      - srl_if_stats
+      - srl_if_traffic_rate
+      - srl_cpu
+      - srl_mem
+      - srl_bgp_stats
+      - srl_ipv4_routes
+      - srl_ipv6_routes
+      - srl_apps  
   spine1:57400:
+    subscriptions:
+      - srl_if_oper_state
+      - srl_net_instance
+      - srl_if_stats
+      - srl_if_traffic_rate
+      - srl_cpu
+      - srl_mem
+      - srl_bgp_stats
+      - srl_ipv4_routes
+      - srl_ipv6_routes
+      - srl_apps  
   spine2:57400:
+    subscriptions:
+      - srl_if_oper_state
+      - srl_net_instance
+      - srl_if_stats
+      - srl_if_traffic_rate
+      - srl_cpu
+      - srl_mem
+      - srl_bgp_stats
+      - srl_ipv4_routes
+      - srl_ipv6_routes
+      - srl_apps  
   dcgw1:57400:
     insecure: true
     subscriptions:
@@ -155,12 +210,6 @@ subscriptions:
     stream-mode: sample
     sample-interval: 5s
   
-  srl_gitclient:
-    paths:
-      - /git-client/statistics/
-    mode: stream
-    stream-mode: sample
-    sample-interval: 5s
 
   ### SROS ###
   sros_if_oper_state:
@@ -240,8 +289,6 @@ subscriptions:
     stream-mode: sample
     sample-interval: 5s
 
-  # total peers
-  #/state router bgp statistics peers
   sros_bgp_neighbor_stats:
     paths:
       - /state/router[router-name=*]/bgp/neighbor/[ip-address=*]/statistics
@@ -277,13 +324,6 @@ subscriptions:
     mode: stream
     stream-mode: sample
     sample-interval: 5s
-
-#  sros_ipv4_bgp_neighbors:
-#    paths:
-#      - /state/router[router-name=*]/route-table/unicast/ipv4/statistics/bgp
-#    mode: stream
-#    stream-mode: sample
-#    sample-interval: 5s
 
   sros_ipv6_stats:
     paths:
@@ -330,7 +370,6 @@ subscriptions:
   sros_vxlan_vteps:
     paths:
       - /state/service/vxlan/tep[ip-address=*]
-      #- /state/service/vpls[service-name=*]/vxlan/instance[vxlan-instance=*]/destinations
     mode: stream
     stream-mode: sample
     sample-interval: 5s
