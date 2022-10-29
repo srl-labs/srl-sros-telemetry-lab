@@ -11,10 +11,65 @@ encoding: json_ietf
 
 targets:
   leaf1:57400:
+    subscriptions:
+      - srl_if_oper_state
+      - srl_net_instance
+      - srl_if_stats
+      - srl_if_traffic_rate
+      - srl_cpu
+      - srl_mem
+      - srl_bgp_stats
+      - srl_ipv4_routes
+      - srl_ipv6_routes
+      - srl_apps  
   leaf2:57400:
+    subscriptions:
+      - srl_if_oper_state
+      - srl_net_instance
+      - srl_if_stats
+      - srl_if_traffic_rate
+      - srl_cpu
+      - srl_mem
+      - srl_bgp_stats
+      - srl_ipv4_routes
+      - srl_ipv6_routes
+      - srl_apps  
   leaf3:57400:
+    subscriptions:
+      - srl_if_oper_state
+      - srl_net_instance
+      - srl_if_stats
+      - srl_if_traffic_rate
+      - srl_cpu
+      - srl_mem
+      - srl_bgp_stats
+      - srl_ipv4_routes
+      - srl_ipv6_routes
+      - srl_apps  
   spine1:57400:
+    subscriptions:
+      - srl_if_oper_state
+      - srl_net_instance
+      - srl_if_stats
+      - srl_if_traffic_rate
+      - srl_cpu
+      - srl_mem
+      - srl_bgp_stats
+      - srl_ipv4_routes
+      - srl_ipv6_routes
+      - srl_apps  
   spine2:57400:
+    subscriptions:
+      - srl_if_oper_state
+      - srl_net_instance
+      - srl_if_stats
+      - srl_if_traffic_rate
+      - srl_cpu
+      - srl_mem
+      - srl_bgp_stats
+      - srl_ipv4_routes
+      - srl_ipv6_routes
+      - srl_apps  
   dcgw1:57400:
     insecure: true
     subscriptions:
