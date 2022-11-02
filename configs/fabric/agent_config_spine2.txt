@@ -1,8 +1,0 @@
-/ git-client
-/ git-client owner srlinuxeurope
-/ git-client repo srl-lab-config-store
-/ git-client filename spine2-config.json
-/ git-client token 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
-/ git-client author "srlinux demo user"
-/ git-client author-email srlinux.europe@gmail.com
-/ git-client branch spine-2
