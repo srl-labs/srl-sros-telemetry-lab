@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 2,
-  "iteration": 1667912823272,
+  "iteration": 1669746117466,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -7082,111 +7082,6 @@
               },
               {
                 "aggregation": "current",
-                "alias": "oper-state_spine-1_e1/32",
-                "column": "Time",
-                "dateColumn": "Time",
-                "dateFormat": "YYYY-MM-DD HH:mm:ss",
-                "dateTHData": [
-                  {
-                    "color": "rgba(245, 54, 54, 0.9)",
-                    "comparator": "ge",
-                    "level": 0,
-                    "value": "0d"
-                  },
-                  {
-                    "color": "rgba(237, 129, 40, 0.89)",
-                    "comparator": "ge",
-                    "level": 0,
-                    "value": "-1d"
-                  },
-                  {
-                    "color": "rgba(50, 172, 45, 0.97)",
-                    "comparator": "ge",
-                    "level": 0,
-                    "value": "-1w"
-                  }
-                ],
-                "decimals": 0,
-                "eventData": [],
-                "eventProp": "id",
-                "eventRegEx": false,
-                "gradient": false,
-                "hidden": false,
-                "invert": true,
-                "linkData": [],
-                "linkProp": "id",
-                "linkRegEx": true,
-                "mappingType": 1,
-                "metricType": "serie",
-                "newRule": false,
-                "numberTHData": [
-                  {
-                    "color": "#C4162A",
-                    "comparator": "ge",
-                    "level": 0
-                  },
-                  {
-                    "color": "#37872D",
-                    "comparator": "ge",
-                    "level": 0,
-                    "value": 1
-                  }
-                ],
-                "order": 59,
-                "overlayIcon": false,
-                "pattern": "oper-state:spine1:57400:ethernet-1/32",
-                "rangeData": [],
-                "reduce": true,
-                "refId": "A",
-                "sanitize": false,
-                "shapeData": [
-                  {
-                    "colorOn": "a",
-                    "hidden": false,
-                    "pattern": "4",
-                    "style": "fillColor"
-                  }
-                ],
-                "shapeProp": "id",
-                "shapeRegEx": true,
-                "stringTHData": [
-                  {
-                    "color": "rgba(50, 172, 45, 0.97)",
-                    "comparator": "eq",
-                    "level": 0,
-                    "value": "/.*/"
-                  },
-                  {
-                    "color": "rgba(237, 129, 40, 0.89)",
-                    "comparator": "eq",
-                    "level": 0,
-                    "value": "/.*warning.*/"
-                  },
-                  {
-                    "color": "rgba(245, 54, 54, 0.9)",
-                    "comparator": "eq",
-                    "level": 0,
-                    "value": "/.*(success|ok).*/"
-                  }
-                ],
-                "textData": [],
-                "textProp": "id",
-                "textRegEx": true,
-                "tooltip": true,
-                "tooltipColors": false,
-                "tooltipLabel": "",
-                "tooltipOn": "a",
-                "tpDirection": "v",
-                "tpGraph": false,
-                "tpGraphScale": "linear",
-                "tpGraphSize": "100%",
-                "tpGraphType": "line",
-                "type": "number",
-                "unit": "short",
-                "valueData": []
-              },
-              {
-                "aggregation": "current",
                 "alias": "oper-state_spine-2_e1/32",
                 "column": "Time",
                 "dateColumn": "Time",
@@ -7237,7 +7132,7 @@
                     "value": 1
                   }
                 ],
-                "order": 60,
+                "order": 59,
                 "overlayIcon": false,
                 "pattern": "oper-state:spine2:57400:ethernet-1/32",
                 "rangeData": [],
@@ -7342,7 +7237,7 @@
                     "value": 1
                   }
                 ],
-                "order": 61,
+                "order": 60,
                 "overlayIcon": false,
                 "pattern": "dcgw2:57400:1/1/c1/1",
                 "rangeData": [],
@@ -7447,7 +7342,7 @@
                     "value": 1
                   }
                 ],
-                "order": 62,
+                "order": 61,
                 "overlayIcon": false,
                 "pattern": "dcgw2:57400:1/1/c3/1",
                 "rangeData": [],
@@ -7552,7 +7447,7 @@
                     "value": 1
                   }
                 ],
-                "order": 63,
+                "order": 62,
                 "overlayIcon": false,
                 "pattern": "dcgw1:57400:1/1/c3/1",
                 "rangeData": [],
@@ -7657,7 +7552,7 @@
                     "value": 1
                   }
                 ],
-                "order": 64,
+                "order": 63,
                 "overlayIcon": false,
                 "pattern": "dcgw1:57400:1/1/c2/1",
                 "rangeData": [],
@@ -7762,7 +7657,7 @@
                     "value": 1
                   }
                 ],
-                "order": 65,
+                "order": 64,
                 "overlayIcon": false,
                 "pattern": "dcgw1:57400:1/1/c1/1",
                 "rangeData": [],
@@ -7867,7 +7762,7 @@
                     "value": 1
                   }
                 ],
-                "order": 66,
+                "order": 65,
                 "overlayIcon": false,
                 "pattern": "dcgw2:57400:1/1/c1/1",
                 "rangeData": [],
@@ -12889,7 +12784,7 @@
       "type": "row"
     }
   ],
-  "refresh": "5s",
+  "refresh": "",
   "schemaVersion": 36,
   "style": "dark",
   "tags": [],
