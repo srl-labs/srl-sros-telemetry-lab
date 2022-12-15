@@ -127,7 +127,7 @@ topology:
     gnmic:
       kind: linux
       mgmt_ipv4: 172.80.80.41
-      image: ghcr.io/karimra/gnmic:0.26.0
+      image: ghcr.io/openconfig/gnmic:0.28.0
       binds:
         - gnmic-config.yml:/gnmic-config.yml:ro
       cmd: --config /gnmic-config.yml --log subscribe
