@@ -291,14 +291,14 @@ subscriptions:
 
   sros_bgp_neighbor_stats:
     paths:
-      - /state/router[router-name=*]/bgp/neighbor/[ip-address=*]/statistics
+      - /state/router[router-name=*]/bgp/neighbor[ip-address=*]/statistics
     mode: stream
     stream-mode: sample
     sample-interval: 5s
 
   sros_bgp_neighbor_session_state:
     paths:
-      - /state/router[router-name=*]/bgp/neighbor/[ip-address=*]/statistics/session-state
+      - /state/router[router-name=*]/bgp/neighbor[ip-address=*]/statistics/session-state
     mode: stream
     stream-mode: sample
     sample-interval: 5s
