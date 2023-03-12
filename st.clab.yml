@@ -15,10 +15,10 @@ topology:
 
   kinds:
     vr-sros:
-      image: vr-sros:21.10.R3
-      license: license-sros21.txt
+      image: vr-sros:22.10.R3
+      license: license-sros22.txt
     srl:
-      image: ghcr.io/nokia/srlinux:22.6.4
+      image: ghcr.io/nokia/srlinux:22.11.2
       type: ixrd2l
     linux:
       image: ghcr.io/hellt/network-multitool

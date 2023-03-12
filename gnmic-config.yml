@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 username: admin
-password: admin
+password: NokiaSrl1!
 skip-verify: true
 port: 57400
 timeout: 10s
@@ -72,6 +72,7 @@ targets:
       - srl_apps  
   dcgw1:57400:
     insecure: true
+    password: admin
     subscriptions:
       - sros_if_oper_state
       - sros_vpls_instance_oper_state
@@ -105,6 +106,7 @@ targets:
       - sros_bgp_evpn_routes_suppressed
   dcgw2:57400:
     insecure: true
+    password: admin
     subscriptions:
       - sros_if_oper_state
       - sros_vpls_instance_oper_state
@@ -291,14 +293,14 @@ subscriptions:
 
   sros_bgp_neighbor_stats:
     paths:
-      - /state/router[router-name=*]/bgp/neighbor/[ip-address=*]/statistics
+      - /state/router[router-name=*]/bgp/neighbor[ip-address=*]/statistics
     mode: stream
     stream-mode: sample
     sample-interval: 5s
 
   sros_bgp_neighbor_session_state:
     paths:
-      - /state/router[router-name=*]/bgp/neighbor/[ip-address=*]/statistics/session-state
+      - /state/router[router-name=*]/bgp/neighbor[ip-address=*]/statistics/session-state
     mode: stream
     stream-mode: sample
     sample-interval: 5s
