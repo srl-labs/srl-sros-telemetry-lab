@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 2,
-  "iteration": 1669746117466,
+  "iteration": 1678979037627,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -712,131 +712,6 @@
               },
               {
                 "aggregation": "current",
-                "alias": "dcgw2_e1/2_out",
-                "column": "Time",
-                "dateColumn": "Time",
-                "dateFormat": "YYYY-MM-DD HH:mm:ss",
-                "dateTHData": [
-                  {
-                    "color": "rgba(245, 54, 54, 0.9)",
-                    "comparator": "ge",
-                    "level": 0,
-                    "value": "0d"
-                  },
-                  {
-                    "color": "rgba(237, 129, 40, 0.89)",
-                    "comparator": "ge",
-                    "level": 0,
-                    "value": "-1d"
-                  },
-                  {
-                    "color": "rgba(50, 172, 45, 0.97)",
-                    "comparator": "ge",
-                    "level": 0,
-                    "value": "-1w"
-                  }
-                ],
-                "decimals": 1,
-                "eventData": [],
-                "eventProp": "id",
-                "eventRegEx": false,
-                "gradient": true,
-                "hidden": false,
-                "invert": true,
-                "linkData": [],
-                "linkProp": "id",
-                "linkRegEx": true,
-                "mappingType": 1,
-                "metricType": "serie",
-                "newRule": false,
-                "numberTHData": [
-                  {
-                    "color": "#abbbbb",
-                    "comparator": "ge",
-                    "level": 0
-                  },
-                  {
-                    "color": "#4bdd33",
-                    "comparator": "ge",
-                    "level": 0,
-                    "value": 500000
-                  },
-                  {
-                    "color": "#ff8000",
-                    "comparator": "gt",
-                    "level": 0,
-                    "value": 2000000
-                  },
-                  {
-                    "color": "rgba(245, 54, 54, 0.9)",
-                    "comparator": "ge",
-                    "level": 0,
-                    "value": 5000000
-                  }
-                ],
-                "order": 5,
-                "overlayIcon": false,
-                "pattern": "dcgw2:57400:1/1/c1/1:out",
-                "rangeData": [],
-                "reduce": true,
-                "refId": "A",
-                "sanitize": false,
-                "shapeData": [
-                  {
-                    "colorOn": "a",
-                    "hidden": false,
-                    "pattern": "22",
-                    "style": "strokeColor"
-                  }
-                ],
-                "shapeProp": "id",
-                "shapeRegEx": false,
-                "stringTHData": [
-                  {
-                    "color": "rgba(50, 172, 45, 0.97)",
-                    "comparator": "eq",
-                    "level": 0,
-                    "value": "/.*/"
-                  },
-                  {
-                    "color": "rgba(237, 129, 40, 0.89)",
-                    "comparator": "eq",
-                    "level": 0,
-                    "value": "/.*warning.*/"
-                  },
-                  {
-                    "color": "rgba(245, 54, 54, 0.9)",
-                    "comparator": "eq",
-                    "level": 0,
-                    "value": "/.*(success|ok).*/"
-                  }
-                ],
-                "textData": [
-                  {
-                    "hidden": false,
-                    "pattern": "22",
-                    "textOn": "wmd",
-                    "textPattern": "/.*/",
-                    "textReplace": "content"
-                  }
-                ],
-                "textProp": "id",
-                "textRegEx": false,
-                "tooltip": false,
-                "tooltipColors": false,
-                "tooltipLabel": "",
-                "tooltipOn": "a",
-                "tpDirection": "v",
-                "tpGraph": false,
-                "tpGraphScale": "linear",
-                "tpGraphSize": "100%",
-                "tpGraphType": "line",
-                "type": "number",
-                "unit": "bps",
-                "valueData": []
-              },
-              {
-                "aggregation": "current",
                 "alias": "dcgw2_e1/3_out",
                 "column": "Time",
                 "dateColumn": "Time",
@@ -899,7 +774,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 6,
+                "order": 5,
                 "overlayIcon": false,
                 "pattern": "dcgw2:57400:1/1/c3/1:out",
                 "rangeData": [],
@@ -1024,7 +899,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 7,
+                "order": 6,
                 "overlayIcon": false,
                 "pattern": "dcgw1:57400:1/1/c3/1:out",
                 "rangeData": [],
@@ -1149,7 +1024,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 8,
+                "order": 7,
                 "overlayIcon": false,
                 "pattern": "dcgw1:57400:1/1/c3/1:in",
                 "rangeData": [],
@@ -1274,7 +1149,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 9,
+                "order": 8,
                 "overlayIcon": false,
                 "pattern": "dcgw2:57400:1/1/c3/1:in",
                 "rangeData": [],
@@ -1399,7 +1274,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 10,
+                "order": 9,
                 "overlayIcon": false,
                 "pattern": "dcgw2:57400:1/1/c1/1:in",
                 "rangeData": [],
@@ -1524,7 +1399,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 11,
+                "order": 10,
                 "overlayIcon": false,
                 "pattern": "dcgw1:57400:1/1/c1/1:out",
                 "rangeData": [],
@@ -1565,6 +1440,131 @@
                   {
                     "hidden": false,
                     "pattern": "12",
+                    "textOn": "wmd",
+                    "textPattern": "/.*/",
+                    "textReplace": "content"
+                  }
+                ],
+                "textProp": "id",
+                "textRegEx": false,
+                "tooltip": false,
+                "tooltipColors": false,
+                "tooltipLabel": "",
+                "tooltipOn": "a",
+                "tpDirection": "v",
+                "tpGraph": false,
+                "tpGraphScale": "linear",
+                "tpGraphSize": "100%",
+                "tpGraphType": "line",
+                "type": "number",
+                "unit": "bps",
+                "valueData": []
+              },
+              {
+                "aggregation": "current",
+                "alias": "dcgw2_e1/2_in",
+                "column": "Time",
+                "dateColumn": "Time",
+                "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                "dateTHData": [
+                  {
+                    "color": "rgba(245, 54, 54, 0.9)",
+                    "comparator": "ge",
+                    "level": 0,
+                    "value": "0d"
+                  },
+                  {
+                    "color": "rgba(237, 129, 40, 0.89)",
+                    "comparator": "ge",
+                    "level": 0,
+                    "value": "-1d"
+                  },
+                  {
+                    "color": "rgba(50, 172, 45, 0.97)",
+                    "comparator": "ge",
+                    "level": 0,
+                    "value": "-1w"
+                  }
+                ],
+                "decimals": 1,
+                "eventData": [],
+                "eventProp": "id",
+                "eventRegEx": false,
+                "gradient": true,
+                "hidden": false,
+                "invert": true,
+                "linkData": [],
+                "linkProp": "id",
+                "linkRegEx": true,
+                "mappingType": 1,
+                "metricType": "serie",
+                "newRule": false,
+                "numberTHData": [
+                  {
+                    "color": "#abbbbb",
+                    "comparator": "ge",
+                    "level": 0
+                  },
+                  {
+                    "color": "#4bdd33",
+                    "comparator": "ge",
+                    "level": 0,
+                    "value": 500000
+                  },
+                  {
+                    "color": "#ff8000",
+                    "comparator": "gt",
+                    "level": 0,
+                    "value": 2000000
+                  },
+                  {
+                    "color": "rgba(245, 54, 54, 0.9)",
+                    "comparator": "ge",
+                    "level": 0,
+                    "value": 5000000
+                  }
+                ],
+                "order": 11,
+                "overlayIcon": false,
+                "pattern": "dcgw2:57400:1/1/c2/1:in",
+                "rangeData": [],
+                "reduce": true,
+                "refId": "A",
+                "sanitize": false,
+                "shapeData": [
+                  {
+                    "colorOn": "a",
+                    "hidden": false,
+                    "pattern": "19",
+                    "style": "strokeColor"
+                  }
+                ],
+                "shapeProp": "id",
+                "shapeRegEx": false,
+                "stringTHData": [
+                  {
+                    "color": "rgba(50, 172, 45, 0.97)",
+                    "comparator": "eq",
+                    "level": 0,
+                    "value": "/.*/"
+                  },
+                  {
+                    "color": "rgba(237, 129, 40, 0.89)",
+                    "comparator": "eq",
+                    "level": 0,
+                    "value": "/.*warning.*/"
+                  },
+                  {
+                    "color": "rgba(245, 54, 54, 0.9)",
+                    "comparator": "eq",
+                    "level": 0,
+                    "value": "/.*(success|ok).*/"
+                  }
+                ],
+                "textData": [
+                  {
+                    "hidden": false,
+                    "pattern": "19",
                     "textOn": "wmd",
                     "textPattern": "/.*/",
                     "textReplace": "content"
@@ -1837,131 +1837,6 @@
               },
               {
                 "aggregation": "current",
-                "alias": "dcgw2_e1/2_in",
-                "column": "Time",
-                "dateColumn": "Time",
-                "dateFormat": "YYYY-MM-DD HH:mm:ss",
-                "dateTHData": [
-                  {
-                    "color": "rgba(245, 54, 54, 0.9)",
-                    "comparator": "ge",
-                    "level": 0,
-                    "value": "0d"
-                  },
-                  {
-                    "color": "rgba(237, 129, 40, 0.89)",
-                    "comparator": "ge",
-                    "level": 0,
-                    "value": "-1d"
-                  },
-                  {
-                    "color": "rgba(50, 172, 45, 0.97)",
-                    "comparator": "ge",
-                    "level": 0,
-                    "value": "-1w"
-                  }
-                ],
-                "decimals": 1,
-                "eventData": [],
-                "eventProp": "id",
-                "eventRegEx": false,
-                "gradient": true,
-                "hidden": false,
-                "invert": true,
-                "linkData": [],
-                "linkProp": "id",
-                "linkRegEx": true,
-                "mappingType": 1,
-                "metricType": "serie",
-                "newRule": false,
-                "numberTHData": [
-                  {
-                    "color": "#abbbbb",
-                    "comparator": "ge",
-                    "level": 0
-                  },
-                  {
-                    "color": "#4bdd33",
-                    "comparator": "ge",
-                    "level": 0,
-                    "value": 500000
-                  },
-                  {
-                    "color": "#ff8000",
-                    "comparator": "gt",
-                    "level": 0,
-                    "value": 2000000
-                  },
-                  {
-                    "color": "rgba(245, 54, 54, 0.9)",
-                    "comparator": "ge",
-                    "level": 0,
-                    "value": 5000000
-                  }
-                ],
-                "order": 14,
-                "overlayIcon": false,
-                "pattern": "dcgw2:57400:1/1/c2/1:in",
-                "rangeData": [],
-                "reduce": true,
-                "refId": "A",
-                "sanitize": false,
-                "shapeData": [
-                  {
-                    "colorOn": "a",
-                    "hidden": false,
-                    "pattern": "19",
-                    "style": "strokeColor"
-                  }
-                ],
-                "shapeProp": "id",
-                "shapeRegEx": false,
-                "stringTHData": [
-                  {
-                    "color": "rgba(50, 172, 45, 0.97)",
-                    "comparator": "eq",
-                    "level": 0,
-                    "value": "/.*/"
-                  },
-                  {
-                    "color": "rgba(237, 129, 40, 0.89)",
-                    "comparator": "eq",
-                    "level": 0,
-                    "value": "/.*warning.*/"
-                  },
-                  {
-                    "color": "rgba(245, 54, 54, 0.9)",
-                    "comparator": "eq",
-                    "level": 0,
-                    "value": "/.*(success|ok).*/"
-                  }
-                ],
-                "textData": [
-                  {
-                    "hidden": false,
-                    "pattern": "19",
-                    "textOn": "wmd",
-                    "textPattern": "/.*/",
-                    "textReplace": "content"
-                  }
-                ],
-                "textProp": "id",
-                "textRegEx": false,
-                "tooltip": false,
-                "tooltipColors": false,
-                "tooltipLabel": "",
-                "tooltipOn": "a",
-                "tpDirection": "v",
-                "tpGraph": false,
-                "tpGraphScale": "linear",
-                "tpGraphSize": "100%",
-                "tpGraphType": "line",
-                "type": "number",
-                "unit": "bps",
-                "valueData": []
-              },
-              {
-                "aggregation": "current",
                 "alias": "dcgw1_e1/2_in",
                 "column": "Time",
                 "dateColumn": "Time",
@@ -2024,7 +1899,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 15,
+                "order": 14,
                 "overlayIcon": false,
                 "pattern": "dcgw1:57400:1/1/c2/1:in",
                 "rangeData": [],
@@ -2149,7 +2024,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 16,
+                "order": 15,
                 "overlayIcon": false,
                 "pattern": "dcgw1:57400:1/1/c1/1:in",
                 "rangeData": [],
@@ -2274,7 +2149,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 17,
+                "order": 16,
                 "overlayIcon": false,
                 "pattern": "spine1:57400:ethernet-1/3:in",
                 "rangeData": [],
@@ -2399,7 +2274,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 18,
+                "order": 17,
                 "overlayIcon": false,
                 "pattern": "spine1:57400:ethernet-1/3:out",
                 "rangeData": [],
@@ -2524,7 +2399,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 19,
+                "order": 18,
                 "overlayIcon": false,
                 "pattern": "spine1:57400:ethernet-1/1:out",
                 "rangeData": [],
@@ -2649,7 +2524,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 20,
+                "order": 19,
                 "overlayIcon": false,
                 "pattern": "spine1:57400:ethernet-1/2:out",
                 "rangeData": [],
@@ -2774,7 +2649,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 21,
+                "order": 20,
                 "overlayIcon": false,
                 "pattern": "spine2:57400:ethernet-1/3:in",
                 "rangeData": [],
@@ -2899,7 +2774,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 22,
+                "order": 21,
                 "overlayIcon": false,
                 "pattern": "spine2:57400:ethernet-1/3:out",
                 "rangeData": [],
@@ -3024,7 +2899,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 23,
+                "order": 22,
                 "overlayIcon": false,
                 "pattern": "spine2:57400:ethernet-1/2:out",
                 "rangeData": [],
@@ -3149,7 +3024,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 24,
+                "order": 23,
                 "overlayIcon": false,
                 "pattern": "spine2:57400:ethernet-1/1:out",
                 "rangeData": [],
@@ -3274,7 +3149,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 25,
+                "order": 24,
                 "overlayIcon": false,
                 "pattern": "spine1:57400:ethernet-1/2:in",
                 "rangeData": [],
@@ -3399,7 +3274,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 26,
+                "order": 25,
                 "overlayIcon": false,
                 "pattern": "spine2:57400:ethernet-1/1:in",
                 "rangeData": [],
@@ -3524,7 +3399,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 27,
+                "order": 26,
                 "overlayIcon": false,
                 "pattern": "spine1:57400:ethernet-1/1:in",
                 "rangeData": [],
@@ -3649,7 +3524,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 28,
+                "order": 27,
                 "overlayIcon": false,
                 "pattern": "spine2:57400:ethernet-1/2:in",
                 "rangeData": [],
@@ -3774,7 +3649,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 29,
+                "order": 28,
                 "overlayIcon": false,
                 "pattern": "dcgw2:57400:ethernet-1/3:in",
                 "rangeData": [],
@@ -3899,7 +3774,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 30,
+                "order": 29,
                 "overlayIcon": false,
                 "pattern": "leaf2:57400:ethernet-1/2:in",
                 "rangeData": [],
@@ -4024,7 +3899,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 31,
+                "order": 30,
                 "overlayIcon": false,
                 "pattern": "leaf2:57400:ethernet-1/1:in",
                 "rangeData": [],
@@ -4149,7 +4024,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 32,
+                "order": 31,
                 "overlayIcon": false,
                 "pattern": "leaf2:57400:ethernet-1/1:out",
                 "rangeData": [],
@@ -4274,7 +4149,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 33,
+                "order": 32,
                 "overlayIcon": false,
                 "pattern": "leaf2:57400:ethernet-1/2:out",
                 "rangeData": [],
@@ -4399,7 +4274,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 34,
+                "order": 33,
                 "overlayIcon": false,
                 "pattern": "leaf1:57400:ethernet-1/1:out",
                 "rangeData": [],
@@ -4524,7 +4399,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 35,
+                "order": 34,
                 "overlayIcon": false,
                 "pattern": "leaf2:57400:ethernet-1/2:out",
                 "rangeData": [],
@@ -4649,7 +4524,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 36,
+                "order": 35,
                 "overlayIcon": false,
                 "pattern": "leaf3:57400:ethernet-1/1:out",
                 "rangeData": [],
@@ -4774,7 +4649,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 37,
+                "order": 36,
                 "overlayIcon": false,
                 "pattern": "leaf2:57400:ethernet-1/2:in",
                 "rangeData": [],
@@ -4899,7 +4774,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 38,
+                "order": 37,
                 "overlayIcon": false,
                 "pattern": "leaf3:57400:ethernet-1/1:in",
                 "rangeData": [],
@@ -5024,7 +4899,7 @@
                     "value": 5000000
                   }
                 ],
-                "order": 39,
+                "order": 38,
                 "overlayIcon": false,
                 "pattern": "leaf1:57400:ethernet-1/1:in",
                 "rangeData": [],
@@ -5137,7 +5012,7 @@
                     "value": 1
                   }
                 ],
-                "order": 40,
+                "order": 39,
                 "overlayIcon": false,
                 "pattern": "oper-state:leaf1:57400:ethernet-1/1",
                 "rangeData": [],
@@ -5242,7 +5117,7 @@
                     "value": 1
                   }
                 ],
-                "order": 41,
+                "order": 40,
                 "overlayIcon": false,
                 "pattern": "oper-state:leaf1:57400:ethernet-1/49",
                 "rangeData": [],
@@ -5347,7 +5222,7 @@
                     "value": 1
                   }
                 ],
-                "order": 42,
+                "order": 41,
                 "overlayIcon": false,
                 "pattern": "oper-state:leaf1:57400:ethernet-1/50",
                 "rangeData": [],
@@ -5452,7 +5327,7 @@
                     "value": 1
                   }
                 ],
-                "order": 43,
+                "order": 42,
                 "overlayIcon": false,
                 "pattern": "oper-state:leaf2:57400:ethernet-1/1",
                 "rangeData": [],
@@ -5557,7 +5432,7 @@
                     "value": 1
                   }
                 ],
-                "order": 44,
+                "order": 43,
                 "overlayIcon": false,
                 "pattern": "oper-state:leaf2:57400:ethernet-1/49",
                 "rangeData": [],
@@ -5662,7 +5537,7 @@
                     "value": 1
                   }
                 ],
-                "order": 45,
+                "order": 44,
                 "overlayIcon": false,
                 "pattern": "oper-state:leaf2:57400:ethernet-1/50",
                 "rangeData": [],
@@ -5767,7 +5642,7 @@
                     "value": 1
                   }
                 ],
-                "order": 46,
+                "order": 45,
                 "overlayIcon": false,
                 "pattern": "oper-state:leaf3:57400:ethernet-1/1",
                 "rangeData": [],
@@ -5872,7 +5747,7 @@
                     "value": 1
                   }
                 ],
-                "order": 47,
+                "order": 46,
                 "overlayIcon": false,
                 "pattern": "oper-state:leaf3:57400:ethernet-1/49",
                 "rangeData": [],
@@ -5977,7 +5852,7 @@
                     "value": 1
                   }
                 ],
-                "order": 48,
+                "order": 47,
                 "overlayIcon": false,
                 "pattern": "oper-state:leaf2:57400:ethernet-1/2",
                 "rangeData": [],
@@ -6082,7 +5957,7 @@
                     "value": 1
                   }
                 ],
-                "order": 49,
+                "order": 48,
                 "overlayIcon": false,
                 "pattern": "oper-state:leaf3:57400:ethernet-1/50",
                 "rangeData": [],
@@ -6187,7 +6062,7 @@
                     "value": 1
                   }
                 ],
-                "order": 50,
+                "order": 49,
                 "overlayIcon": false,
                 "pattern": "oper-state:spine1:57400:ethernet-1/1",
                 "rangeData": [],
@@ -6292,7 +6167,7 @@
                     "value": 1
                   }
                 ],
-                "order": 51,
+                "order": 50,
                 "overlayIcon": false,
                 "pattern": "oper-state:spine1:57400:ethernet-1/2",
                 "rangeData": [],
@@ -6397,7 +6272,7 @@
                     "value": 1
                   }
                 ],
-                "order": 52,
+                "order": 51,
                 "overlayIcon": false,
                 "pattern": "oper-state:spine1:57400:ethernet-1/3",
                 "rangeData": [],
@@ -6502,7 +6377,7 @@
                     "value": 1
                   }
                 ],
-                "order": 53,
+                "order": 52,
                 "overlayIcon": false,
                 "pattern": "oper-state:spine2:57400:ethernet-1/1",
                 "rangeData": [],
@@ -6607,7 +6482,7 @@
                     "value": 1
                   }
                 ],
-                "order": 54,
+                "order": 53,
                 "overlayIcon": false,
                 "pattern": "oper-state:spine2:57400:ethernet-1/2",
                 "rangeData": [],
@@ -6712,7 +6587,7 @@
                     "value": 1
                   }
                 ],
-                "order": 55,
+                "order": 54,
                 "overlayIcon": false,
                 "pattern": "oper-state:spine2:57400:ethernet-1/3",
                 "rangeData": [],
@@ -6817,7 +6692,7 @@
                     "value": 1
                   }
                 ],
-                "order": 56,
+                "order": 55,
                 "overlayIcon": false,
                 "pattern": "oper-state:spine2:57400:ethernet-1/31",
                 "rangeData": [],
@@ -6922,7 +6797,7 @@
                     "value": 1
                   }
                 ],
-                "order": 57,
+                "order": 56,
                 "overlayIcon": false,
                 "pattern": "oper-state:spine1:57400:ethernet-1/32",
                 "rangeData": [],
@@ -7027,7 +6902,7 @@
                     "value": 1
                   }
                 ],
-                "order": 58,
+                "order": 57,
                 "overlayIcon": false,
                 "pattern": "oper-state:spine1:57400:ethernet-1/31",
                 "rangeData": [],
@@ -7132,7 +7007,7 @@
                     "value": 1
                   }
                 ],
-                "order": 59,
+                "order": 58,
                 "overlayIcon": false,
                 "pattern": "oper-state:spine2:57400:ethernet-1/32",
                 "rangeData": [],
@@ -7237,7 +7112,7 @@
                     "value": 1
                   }
                 ],
-                "order": 60,
+                "order": 59,
                 "overlayIcon": false,
                 "pattern": "dcgw2:57400:1/1/c1/1",
                 "rangeData": [],
@@ -7342,7 +7217,7 @@
                     "value": 1
                   }
                 ],
-                "order": 61,
+                "order": 60,
                 "overlayIcon": false,
                 "pattern": "dcgw2:57400:1/1/c3/1",
                 "rangeData": [],
@@ -7447,7 +7322,7 @@
                     "value": 1
                   }
                 ],
-                "order": 62,
+                "order": 61,
                 "overlayIcon": false,
                 "pattern": "dcgw1:57400:1/1/c3/1",
                 "rangeData": [],
@@ -7552,7 +7427,7 @@
                     "value": 1
                   }
                 ],
-                "order": 63,
+                "order": 62,
                 "overlayIcon": false,
                 "pattern": "dcgw1:57400:1/1/c2/1",
                 "rangeData": [],
@@ -7657,7 +7532,7 @@
                     "value": 1
                   }
                 ],
-                "order": 64,
+                "order": 63,
                 "overlayIcon": false,
                 "pattern": "dcgw1:57400:1/1/c1/1",
                 "rangeData": [],
@@ -7762,7 +7637,7 @@
                     "value": 1
                   }
                 ],
-                "order": 65,
+                "order": 64,
                 "overlayIcon": false,
                 "pattern": "dcgw2:57400:1/1/c1/1",
                 "rangeData": [],
@@ -11046,8 +10921,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -11137,8 +11011,7 @@
                 "mode": "percentage",
                 "steps": [
                   {
-                    "color": "dark-blue",
-                    "value": null
+                    "color": "dark-blue"
                   },
                   {
                     "color": "red",
@@ -11160,8 +11033,7 @@
                       "mode": "absolute",
                       "steps": [
                         {
-                          "color": "dark-blue",
-                          "value": null
+                          "color": "dark-blue"
                         }
                       ]
                     }
@@ -11180,8 +11052,7 @@
                       "mode": "absolute",
                       "steps": [
                         {
-                          "color": "dark-blue",
-                          "value": null
+                          "color": "dark-blue"
                         }
                       ]
                     }
@@ -11305,8 +11176,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -11389,8 +11259,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "dark-blue",
-                    "value": null
+                    "color": "dark-blue"
                   },
                   {
                     "color": "red",
@@ -11484,8 +11353,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -11575,8 +11443,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -11695,8 +11562,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -11764,8 +11630,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -11867,8 +11732,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -11958,8 +11822,7 @@
                 "mode": "percentage",
                 "steps": [
                   {
-                    "color": "dark-blue",
-                    "value": null
+                    "color": "dark-blue"
                   },
                   {
                     "color": "red",
@@ -11981,8 +11844,7 @@
                       "mode": "absolute",
                       "steps": [
                         {
-                          "color": "dark-blue",
-                          "value": null
+                          "color": "dark-blue"
                         }
                       ]
                     }
@@ -12001,8 +11863,7 @@
                       "mode": "absolute",
                       "steps": [
                         {
-                          "color": "dark-blue",
-                          "value": null
+                          "color": "dark-blue"
                         }
                       ]
                     }
@@ -12127,8 +11988,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -12211,8 +12071,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "dark-blue",
-                    "value": null
+                    "color": "dark-blue"
                   },
                   {
                     "color": "red",
@@ -12338,8 +12197,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -12429,8 +12287,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -12549,8 +12406,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -12634,8 +12490,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -12703,8 +12558,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
