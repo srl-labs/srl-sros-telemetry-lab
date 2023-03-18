@@ -153,6 +153,7 @@ topology:
         - configs/grafana/dashboards.yml:/etc/grafana/provisioning/dashboards/dashboards.yaml:ro
         - configs/grafana/dashboards:/var/lib/grafana/dashboards
         - configs/grafana/grafana-flowcharting:/var/lib/grafana/plugins/grafana-flowcharting
+        - configs/grafana/grafana.ini:/etc/grafana/grafana.ini
       ports:
         - 3000:3000
       group: "10"
