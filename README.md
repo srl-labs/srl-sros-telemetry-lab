@@ -118,7 +118,7 @@ To start the traffic:
 
 To stop the traffic:
 
-* `bash traffic.sh stop` - stop traffic generation between all nodes
+* `bash traffic.sh stop all` - stop traffic generation between all nodes
 * `bash traffic.sh stop 1-2` - stop traffic generation between client1 and client2
 * `bash traffic.sh stop 1-3` - stop traffic generation between client1 and client3
 * `bash traffic.sh stop 4-6` - stop traffic generation between client4 and client6
