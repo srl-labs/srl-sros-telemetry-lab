@@ -21,14 +21,14 @@ The lab is deployed with [containerlab](https://containerlab.dev) project where 
 
 ```bash
 # deploy a lab
-containerlab deploy -t st.clab.yml
+clab deploy
 ```
 
 Once the lab is completed, it can be removed with the destroy command.
 
 ```bash
 # destroy a lab
-containerlab destroy -t st.clab.yml
+clab destroy
 ```
 
 ## Accessing the network elements
