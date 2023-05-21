@@ -24,7 +24,7 @@ The lab is deployed with [containerlab](https://containerlab.dev) project where 
 clab deploy
 ```
 
-Once the lab is completed (approximately 5 minutes due to the boot of the vr-sros VMs), it can be removed with the destroy command.
+Once the lab is completed, it can be removed with the destroy command.
 
 ```bash
 # destroy a lab
