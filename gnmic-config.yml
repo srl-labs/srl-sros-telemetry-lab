@@ -97,7 +97,6 @@ targets:
       - sros_evpn_vxlan_vni
       - sros_vxlan_vteps
       - sros_vxlan_learned_macs
-      - sros_bgp_neighbor_stats
       - sros_bgp_neighbor_session_state
       - sros_bgp_routes_stats
       - sros_bgp_routes_active
@@ -131,7 +130,6 @@ targets:
       - sros_evpn_vxlan_vni
       - sros_vxlan_vteps
       - sros_vxlan_learned_macs
-      - sros_bgp_neighbor_stats
       - sros_bgp_neighbor_session_state
       - sros_bgp_routes_stats
       - sros_bgp_routes_active
@@ -382,14 +380,7 @@ subscriptions:
     mode: stream
     stream-mode: sample
     sample-interval: 5s   
-
-  sros_bgp_neighbor_stats:
-    paths:
-      - /state/router[router-name=*]/bgp/neighbor[ip-address=*]/statistics
-    mode: stream
-    stream-mode: sample
-    sample-interval: 5s  
-
+ 
   sros_bgp_routes_stats:
     paths:
       - /state/router[router-name=*]/route-table/unicast/ipv4/statistics/bgp
