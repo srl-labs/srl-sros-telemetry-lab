@@ -29,12 +29,12 @@ topology:
       kind: vr-sros
       mgmt-ipv4: 172.80.80.51
       type: sr-1
-      startup-config: configs/dci/dcgw1.cfg
+      startup-config: configs/dci/dcgw1.partial.cfg
     dcgw2:
       kind: vr-sros
       mgmt-ipv4: 172.80.80.52
       type: sr-1
-      startup-config: configs/dci/dcgw2.cfg
+      startup-config: configs/dci/dcgw2.partial.cfg
 
     ### SPINES ###
     spine1:
