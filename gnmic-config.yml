@@ -10,7 +10,7 @@ timeout: 10s
 encoding: json_ietf
 
 targets:
-  leaf1:57400:
+  leaf1:
     subscriptions:
       - srl_if_oper_state
       - srl_net_instance
@@ -22,7 +22,7 @@ targets:
       - srl_ipv4_routes
       - srl_ipv6_routes
       - srl_apps  
-  leaf2:57400:
+  leaf2:
     subscriptions:
       - srl_if_oper_state
       - srl_net_instance
@@ -34,7 +34,7 @@ targets:
       - srl_ipv4_routes
       - srl_ipv6_routes
       - srl_apps  
-  leaf3:57400:
+  leaf3:
     subscriptions:
       - srl_if_oper_state
       - srl_net_instance
@@ -46,7 +46,7 @@ targets:
       - srl_ipv4_routes
       - srl_ipv6_routes
       - srl_apps  
-  spine1:57400:
+  spine1:
     subscriptions:
       - srl_if_oper_state
       - srl_net_instance
@@ -58,7 +58,7 @@ targets:
       - srl_ipv4_routes
       - srl_ipv6_routes
       - srl_apps  
-  spine2:57400:
+  spine2:
     subscriptions:
       - srl_if_oper_state
       - srl_net_instance
@@ -70,7 +70,7 @@ targets:
       - srl_ipv4_routes
       - srl_ipv6_routes
       - srl_apps  
-  dcgw1:57400:
+  dcgw1:
     insecure: true
     password: admin
     subscriptions:
@@ -103,7 +103,7 @@ targets:
       - sros_bgp_used_routes
       - sros_bgp_evpn_routes_active
       - sros_bgp_evpn_routes_suppressed
-  dcgw2:57400:
+  dcgw2:
     insecure: true
     password: admin
     subscriptions:
@@ -428,7 +428,10 @@ outputs:
     debug: false
     event-processors:
       - trim-prefixes
-      - up-down-map
+      - oper-state-to-int
+      - rename-srl-interface
+      - rename-port-sros
+      - rename-port-value-sros
   # stdout:
   #   type: file
   #   file-type: stdout
@@ -444,10 +447,10 @@ processors:
       transforms:
         - path-base:
             apply-on: "name"
-  up-down-map:
+  oper-state-to-int:
     event-strings:
       value-names:
-        - oper-state
+        - ".*"
       transforms:
         - replace:
             apply-on: "value"
@@ -457,3 +460,30 @@ processors:
             apply-on: "value"
             old: "down"
             new: "0"
+  rename-srl-interface:
+    event-strings:
+      tag-names:
+        - "^interface_name"
+      transforms:
+        - replace:
+            apply-on: "value"
+            old: "ethernet-(\\d+)/(\\d+)"
+            new: "e$1-$2"
+  rename-port-sros:
+    event-strings:
+      tag-names:
+        - "^port_port-id"
+      transforms:
+        - replace:
+            apply-on: "name"
+            old: "port_port-id"
+            new: "interface_name"
+  rename-port-value-sros:
+    event-strings:
+      tag-names:
+        - "^interface_name"
+      transforms:
+        - replace:
+            apply-on: "value"
+            old: ".*/c(\\d+)(/\\d+)?"
+            new: "eth$1"
