@@ -126,7 +126,7 @@
             },
             "editorMode": "code",
             "expr": "gnmic_srl_if_traffic_rate_in_bps",
-            "legendFormat": "{{source}}:{{interface_name}}:IN",
+            "legendFormat": "{{source}}:{{interface_name}}:in",
             "range": true,
             "refId": "A"
           },
@@ -138,7 +138,7 @@
             "editorMode": "code",
             "expr": "gnmic_srl_if_traffic_rate_out_bps",
             "hide": false,
-            "legendFormat": "{{source}}:{{interface_name}}:OUT",
+            "legendFormat": "{{source}}:{{interface_name}}:out",
             "range": true,
             "refId": "B"
           },
@@ -150,7 +150,7 @@
             "editorMode": "code",
             "expr": "rate(gnmic_sros_if_stats_in_octets[10s])*8",
             "hide": false,
-            "legendFormat": "{{source}}:{{interface_name}}:IN",
+            "legendFormat": "{{source}}:{{interface_name}}:in",
             "range": true,
             "refId": "C"
           },
@@ -162,7 +162,7 @@
             "editorMode": "code",
             "expr": "rate(gnmic_sros_if_stats_out_octets[10s])*8",
             "hide": false,
-            "legendFormat": "{{source}}:{{interface_name}}:OUT",
+            "legendFormat": "{{source}}:{{interface_name}}:out",
             "range": true,
             "refId": "D"
           }
@@ -257,7 +257,7 @@
             "expr": "rate(gnmic_sros_if_stats_in_octets[10s])*8",
             "hide": false,
             "instant": false,
-            "legendFormat": "{{source}}:{{interface_name}}:out",
+            "legendFormat": "{{source}}:{{interface_name}}:in",
             "range": true,
             "refId": "E"
           },
@@ -269,7 +269,7 @@
             "expr": "rate(gnmic_sros_if_stats_out_octets[10s])*8",
             "hide": false,
             "instant": false,
-            "legendFormat": "{{source}}:{{interface_name}}:in",
+            "legendFormat": "{{source}}:{{interface_name}}:out",
             "range": true,
             "refId": "F"
           }
@@ -329,7 +329,7 @@
             "editorMode": "code",
             "expr": "gnmic_sros_if_oper_state_oper_state",
             "hide": false,
-            "legendFormat": "{{source}}:{{port_port_id}}",
+            "legendFormat": "{{source}}:{{interface_name}}",
             "range": true,
             "refId": "B"
           }
@@ -685,7 +685,7 @@
             "editorMode": "code",
             "expr": "gnmic_srl_if_traffic_rate_in_bps{source=\"$Fabric\"}",
             "instant": false,
-            "legendFormat": "{{interface_name}}:IN",
+            "legendFormat": "{{interface_name}}:in",
             "range": true,
             "refId": "A"
           },
@@ -698,7 +698,7 @@
             "expr": "gnmic_srl_if_traffic_rate_out_bps{source=\"$Fabric\"}",
             "hide": false,
             "instant": false,
-            "legendFormat": "{{interface_name}}:OUT",
+            "legendFormat": "{{interface_name}}:out",
             "range": true,
             "refId": "B"
           }
@@ -1546,7 +1546,7 @@
             },
             "editorMode": "code",
             "expr": "rate(gnmic_sros_if_stats_in_octets{source=\"$DCI\"}[10s])*8",
-            "legendFormat": "{{port_port_id}}:IN",
+            "legendFormat": "{{interface_name}}:in",
             "range": true,
             "refId": "A"
           },
@@ -1558,7 +1558,7 @@
             "editorMode": "code",
             "expr": "rate(gnmic_sros_if_stats_out_octets{source=\"$DCI\"}[10s])*8",
             "hide": false,
-            "legendFormat": "{{port_port_id}}:OUT",
+            "legendFormat": "{{interface_name}}:out",
             "range": true,
             "refId": "B"
           }
