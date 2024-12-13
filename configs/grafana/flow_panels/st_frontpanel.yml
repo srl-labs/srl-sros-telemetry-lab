@@ -7,6 +7,30 @@ anchors:
       level: 1
 cellIdPreamble: cell-
 cells:
+  dcgw1:eth1:
+    dataRef: oper-state:dcgw1:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  dcgw1:eth2:
+    dataRef: oper-state:dcgw1:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  dcgw1:eth3:
+    dataRef: oper-state:dcgw1:eth3
+    fillColor:
+      thresholds: *thresholds-operstate
+  dcgw2:eth1:
+    dataRef: oper-state:dcgw2:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  dcgw2:eth2:
+    dataRef: oper-state:dcgw2:eth2
+    fillColor:
+      thresholds: *thresholds-operstate
+  dcgw2:eth3:
+    dataRef: oper-state:dcgw2:eth3
+    fillColor:
+      thresholds: *thresholds-operstate
   spine1:e1-1:
     dataRef: oper-state:spine1:e1-1
     fillColor:
