@@ -79,6 +79,10 @@ cells:
     dataRef: oper-state:leaf2:e1-1
     fillColor:
       thresholds: *thresholds-operstate
+  leaf2:e1-2:
+    dataRef: oper-state:leaf2:e1-2
+    fillColor:
+      thresholds: *thresholds-operstate
   leaf3:e1-49:
     dataRef: oper-state:leaf3:e1-49
     fillColor:

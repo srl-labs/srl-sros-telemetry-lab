@@ -329,7 +329,7 @@
             "editorMode": "code",
             "expr": "gnmic_sros_if_oper_state_oper_state",
             "hide": false,
-            "legendFormat": "{{source}}:{{interface_name}}",
+            "legendFormat": "oper-state:{{source}}:{{interface_name}}",
             "range": true,
             "refId": "B"
           }
