@@ -7,28 +7,28 @@ anchors:
       level: 1
 cellIdPreamble: cell-
 cells:
-  dcgw1:eth1:
-    dataRef: oper-state:dcgw1:eth1
+  dcgw1:1/1/c1/1:
+    dataRef: oper-state:dcgw1:1/1/c1/1
     fillColor:
       thresholds: *thresholds-operstate
-  dcgw1:eth2:
-    dataRef: oper-state:dcgw1:eth2
+  dcgw1:1/1/c2/1:
+    dataRef: oper-state:dcgw1:1/1/c2/1
     fillColor:
       thresholds: *thresholds-operstate
-  dcgw1:eth3:
-    dataRef: oper-state:dcgw1:eth3
+  dcgw1:1/1/c3/1:
+    dataRef: oper-state:dcgw1:1/1/c3/1
     fillColor:
       thresholds: *thresholds-operstate
-  dcgw2:eth1:
-    dataRef: oper-state:dcgw2:eth1
+  dcgw2:1/1/c1/1:
+    dataRef: oper-state:dcgw2:1/1/c1/1
     fillColor:
       thresholds: *thresholds-operstate
-  dcgw2:eth2:
-    dataRef: oper-state:dcgw2:eth2
+  dcgw2:1/1/c2/1:
+    dataRef: oper-state:dcgw2:1/1/c2/1
     fillColor:
       thresholds: *thresholds-operstate
-  dcgw2:eth3:
-    dataRef: oper-state:dcgw2:eth3
+  dcgw2:1/1/c3/1:
+    dataRef: oper-state:dcgw2:1/1/c3/1
     fillColor:
       thresholds: *thresholds-operstate
   spine1:e1-1:

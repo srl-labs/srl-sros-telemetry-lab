@@ -72,7 +72,7 @@ targets:
       - srl_apps  
   dcgw1:
     insecure: true
-    password: admin
+    password: NokiaSros1!
     subscriptions:
       - sros_if_oper_state
       - sros_vpls_instance_oper_state
@@ -105,7 +105,7 @@ targets:
       - sros_bgp_evpn_routes_suppressed
   dcgw2:
     insecure: true
-    password: admin
+    password: NokiaSros1!
     subscriptions:
       - sros_if_oper_state
       - sros_vpls_instance_oper_state

@@ -11,40 +11,40 @@ mgmt:
 
 topology:
   defaults:
-    kind: srl
+    kind: nokia_srlinux
 
   kinds:
-    vr-sros:
-      image: registry.srlinux.dev/pub/vr-sros:23.7.R1
+    nokia_srsim:
+      image: registry.srlinux.dev/pub/nokia_srsim:25.7.R1
       license: ./license_sr.key
-    srl:
-      image: ghcr.io/nokia/srlinux:23.3.1
-      type: ixrd2l
+    nokia_srlinux:
+      image: ghcr.io/nokia/srlinux:25.7.1
+      type: ixr-d2l
     linux:
       image: ghcr.io/srl-labs/network-multitool
 
   nodes:
     ### DCGWS ###
     dcgw1:
-      kind: vr-sros
+      kind: nokia_srsim
       mgmt-ipv4: 172.80.80.51
       type: sr-1
       startup-config: configs/dci/dcgw1.partial.cfg
     dcgw2:
-      kind: vr-sros
+      kind: nokia_srsim
       mgmt-ipv4: 172.80.80.52
       type: sr-1
       startup-config: configs/dci/dcgw2.partial.cfg
 
     ### SPINES ###
     spine1:
-      type: ixrd3l
+      type: ixr-d3l
       group: spine
       startup-config: configs/fabric/spine1.cfg
       mgmt-ipv4: 172.80.80.21
 
     spine2:
-      type: ixrd3l
+      type: ixr-d3l
       group: spine
       startup-config: configs/fabric/spine2.cfg
       mgmt-ipv4: 172.80.80.22
@@ -155,7 +155,6 @@ topology:
       ports:
         - 3000:3000
       env:
-        HTTPS_PROXY: "http://10.158.101.16:8080"
         GF_INSTALL_PLUGINS: "andrewbmchugh-flow-panel"
         # env vars to enable anonymous access
         GF_ORG_ROLE: "Admin"
@@ -173,13 +172,16 @@ topology:
     - endpoints: ["spine2:e1-1", "leaf1:e1-50"]
     - endpoints: ["spine2:e1-2", "leaf2:e1-50"]
     - endpoints: ["spine2:e1-3", "leaf3:e1-50"]
+
     - endpoints: ["leaf1:e1-1", "client1:eth1"]
     - endpoints: ["leaf2:e1-1", "client2:eth1"]
     - endpoints: ["leaf3:e1-1", "client3:eth1"]
-    - endpoints: ["dcgw1:eth1", "spine1:e1-31"]
-    - endpoints: ["dcgw2:eth1", "spine1:e1-32"]
-    - endpoints: ["dcgw1:eth2", "spine2:e1-31"]
-    - endpoints: ["dcgw2:eth2", "spine2:e1-32"]
-    - endpoints: ["client4:eth1", "dcgw1:eth3"]
-    - endpoints: ["client5:eth1", "dcgw2:eth3"]
+
+    - endpoints: ["dcgw1:1/1/c1/1", "spine1:e1-31"]
+    - endpoints: ["dcgw2:1/1/c1/1", "spine1:e1-32"]
+    - endpoints: ["dcgw1:1/1/c2/1", "spine2:e1-31"]
+    - endpoints: ["dcgw2:1/1/c2/1", "spine2:e1-32"]
+
+    - endpoints: ["client4:eth1", "dcgw1:1/1/c3/1"]
+    - endpoints: ["client5:eth1", "dcgw2:1/1/c3/1"]
     - endpoints: ["leaf2:e1-2", "client6:eth1"]
