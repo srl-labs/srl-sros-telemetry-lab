@@ -431,7 +431,7 @@ outputs:
       - oper-state-to-int
       - rename-srl-interface
       - rename-port-sros
-      - rename-port-value-sros
+  #    - rename-port-value-sros
   # stdout:
   #   type: file
   #   file-type: stdout
