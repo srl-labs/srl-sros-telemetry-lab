@@ -141,7 +141,7 @@ topology:
         - configs/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       cmd: --config.file=/etc/prometheus/prometheus.yml
       ports:
-        - 9091:9090
+        - 9090:9090
       group: "10"
 
     grafana:
