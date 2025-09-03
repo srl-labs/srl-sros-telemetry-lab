@@ -16,7 +16,7 @@ topology:
   kinds:
     nokia_srsim:
       image: nokia_srsim:25.7.R1
-      license: ./license_sr.key
+      license: /opt/nokia/sros/license.txt
     nokia_srlinux:
       image: ghcr.io/nokia/srlinux:25.7.1
       type: ixr-d2l
@@ -127,7 +127,7 @@ topology:
     gnmic:
       kind: linux
       mgmt-ipv4: 172.80.80.41
-      image: ghcr.io/openconfig/gnmic:0.30.0
+      image: ghcr.io/openconfig/gnmic:0.41.0
       binds:
         - gnmic-config.yml:/gnmic-config.yml:ro
       cmd: --config /gnmic-config.yml --log subscribe
@@ -141,7 +141,7 @@ topology:
         - configs/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       cmd: --config.file=/etc/prometheus/prometheus.yml
       ports:
-        - 9090:9090
+        - 9091:9090
       group: "10"
 
     grafana:
@@ -163,6 +163,7 @@ topology:
         GF_AUTH_ANONYMOUS_ORG_ROLE: Admin
         GF_AUTH_ANONYMOUS: "true"
         GF_AUTH_OAUTH_AUTO_LOGIN: "true"
+        https_proxy: ${https_proxy}
       group: "10"
 
   links:
