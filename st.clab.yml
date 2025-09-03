@@ -163,7 +163,6 @@ topology:
         GF_AUTH_ANONYMOUS_ORG_ROLE: Admin
         GF_AUTH_ANONYMOUS: "true"
         GF_AUTH_OAUTH_AUTO_LOGIN: "true"
-        https_proxy: ${https_proxy}
       group: "10"
 
   links:
