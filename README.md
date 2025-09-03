@@ -6,6 +6,8 @@ The Nokia Service Router Operating System (SR OS) is robust and scalable OS and 
 
 This lab is a small augmentation of the original srl-telemetry-lab <https://github.com/srl-labs/srl-telemetry-lab> which basically represents a small Clos fabric with [Nokia SR Linux](https://learn.srlinux.dev/) switches running as containers and a DC gateways layer composed by [Nokia SROS](https://www.nokia.com/networks/technologies/service-router-operating-system/) DC Gateways on the containerized Service Router Simulator (SR-SIM).  SR-SIM is a cloud-native version of the SR OS software that runs on hardware platforms. The image can be downloaded from the [Nokia Support Portal](https://customer.nokia.com/support/s/) and requires an active SR-SIM license to operate. The lab topology consists of a Clos/DCI, plus a Streaming Telemetry stack comprised of gnmic, prometheus and grafana applications.
 
+<img width="9660" height="9760" alt="telemetry01- 1  wiring" src="https://github.com/user-attachments/assets/96cb2f48-700f-4b22-bad3-af08cca07bd7" />
+
 Goals of this lab:
 
 1. Demonstrate how a telemetry stack can be incorporated into the same clab topology file.
