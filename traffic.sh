@@ -62,6 +62,20 @@ stopAll() {
     docker exec client5 pkill iperf3    
 }
 
+usage() {
+   echo 'Usage: ./traffic.sh [start|stop] [OPTS]'
+   echo 'Options:'
+   echo '  all'
+   echo '  1-2'
+   echo '  1-3'
+   echo '  4-6'
+   echo '  5-6'
+}
+
+if [ "$#" -lt 1 ]; then
+	usage
+	exit 1
+fi
 # start traffic
 if [ $1 == "start" ]; then
     if [ $2 == "1-2" ]; then

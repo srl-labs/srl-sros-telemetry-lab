@@ -2,9 +2,11 @@
 
 SR Linux has first-class Streaming Telemetry support thanks to 100% YANG coverage of state and config data. The wholistic coverage enables SR Linux users to stream **any** data off of the NOS with on-change, sample, or target-defined support. A discrepancy in visibility across APIs is not about SR Linux.
 
-The Nokia Service Router Operating System (SR OS) is robust and scalable OS and provides the foundation of Nokia's comprehensive portfolio of physical and virtualized routers. Provides Streaming Telemetry based on the OpenConfig gnmi.proto and the proprietary NOKIA SR OS YANG data models suporting sample, target-defined, on-change telemetry based on dial-in or dial-out calls.
+The Nokia Service Router Operating System (SR OS) is robust and scalable OS and provides the foundation of Nokia's comprehensive portfolio of physical and virtualized routers. Provides Streaming Telemetry based on the OpenConfig gnmi.proto and the proprietary NOKIA SR OS YANG data models supporting sample, target-defined, on-change telemetry based on dial-in or dial-out calls.
 
-This lab is a small augmentation of the original srl-telemetry-lab <https://github.com/srl-labs/srl-telemetry-lab> wich basically represents a small Clos fabric with [Nokia SR Linux](https://learn.srlinux.dev/) switches running as containers and a DC gateways layer composed by [Nokia SROS](https://www.nokia.com/networks/technologies/service-router-operating-system/) DC Gateways on a containerized vSIM image connected through a "tc mirred function" that is very well described in the @hellt forum (https://netdevops.me/2021/transparently-redirecting-packetsframes-between-interfaces/). The lab topology consists of a Clos/DCI, plus a Streaming Telemetry stack comprised of gnmic, prometheus and grafana applications.
+This lab is a small augmentation of the original srl-telemetry-lab <https://github.com/srl-labs/srl-telemetry-lab> which basically represents a small Clos fabric with [Nokia SR Linux](https://learn.srlinux.dev/) switches running as containers and a DC gateways layer composed by [Nokia SROS](https://www.nokia.com/networks/technologies/service-router-operating-system/) DC Gateways on the containerized Service Router Simulator (SR-SIM).  SR-SIM is a cloud-native version of the SR OS software that runs on hardware platforms. The image can be downloaded from the [Nokia Support Portal](https://customer.nokia.com/support/s/) and requires an active SR-SIM license to operate. The lab topology consists of a Clos/DCI, plus a Streaming Telemetry stack comprised of gnmic, prometheus and grafana applications.
+
+<img width="9660" height="9760" alt="telemetry01- 1  wiring" src="https://github.com/user-attachments/assets/96cb2f48-700f-4b22-bad3-af08cca07bd7" />
 
 Goals of this lab:
 
@@ -13,7 +15,7 @@ Goals of this lab:
 3. Demonstrate SR Linux and SROS interoperability in the DC Fabric.
 4. Explain what a SROS based telemetry subscription is.
 5. Provide practical configuration examples for the gnmic collector to subscribe to fabric nodes and export metrics to Prometheus TSDB.
-6. Introduce advanced Grafana dashboarding with FlowChart plugin rendering port speeds and statuses.
+6. Introduce advanced Grafana dashboarding with the [flow](https://grafana.com/grafana/plugins/andrewbmchugh-flow-panel/) plugin rendering port speeds and statuses.
 
 ## Deploying the lab
 
@@ -77,7 +79,7 @@ Flags: S static, D dynamic, L discovered by LLDP, B BFD enabled, - disabled, * s
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```
 
-By connecting via SSH is also possible to one of the DC gateways verify the stats of those BGP sesions from the SROS perspective.
+By connecting via SSH is also possible to one of the DC gateways verify the stats of those BGP sessions from the SROS perspective.
 
 ```
 A:admin@dcgw1# show router bgp summary | match Summary post-lines 20
@@ -138,13 +140,15 @@ As the lab name suggests, telemetry is at its core. The following stack of softw
 
 Grafana is a key component of this lab. Lab's topology file includes grafana node along with its configuration parameters such as dashboards, datasources and required plugins.
 
-Grafana dashboard provided by this repository provides multiple views on the collected real-time data. Powered by [flowchart plugin](https://grafana.com/grafana/plugins/agenty-flowcharting-panel/) it overlays telemetry sourced data over graphics such as topology and front panel views:
+Grafana dashboard provided by this repository provides multiple views on the collected real-time data. Powered by the [flow](https://grafana.com/grafana/plugins/andrewbmchugh-flow-panel/) plugin it overlays telemetry sourced data over graphics such as topology and front panel views:
 
 ![pic3](https://user-images.githubusercontent.com/86619221/205601697-bd5b68f0-e2c6-49d3-a1f3-1cb5b67b34d9.JPG)
 
-Using the flowchart plugin and real telemetry data users can create interactive topology maps (aka weathermap) with a visual indication of link rate/utilization.
+Using the flow plugin and real telemetry data users can create interactive topology maps (aka weathermap) with a visual indication of link rate/utilization.
 
 ![pic2](https://user-images.githubusercontent.com/86619221/205601728-f3b254d1-2b03-4e75-b0e4-eb89cf54789a.JPG)
+
+The panels for the flow plugin has been autocreated by the [clab-io-draw](https://github.com/srl-labs/clab-io-draw) tool.
 
 ## Access details
 
